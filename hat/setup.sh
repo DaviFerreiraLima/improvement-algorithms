@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # 🚀 Ativa o ambiente Conda (ajuste o caminho para o seu conda.sh se necessário)
-source ~/miniconda3/etc/profile.d/conda.sh
 conda activate hat-env
 
 # ✅ Clona o repositório (se ainda não existir)
