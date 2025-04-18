@@ -45,7 +45,7 @@ datasets:
   test:
     name: demo
     type: SingleImageDataset
-    dataroot_lq: /ABSOLUTO/CAMINHO/PARA/inputs_imgs
+    dataroot_lq: ../inputs_imgs
     io_backend:
       type: disk
 
