@@ -10,7 +10,7 @@ fi
 cd HAT
 
 # 📦 Instala dependências
-pip install torch torchvision torchaudio
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 pip install basicsr==1.3.4.9
 pip install -r requirements.txt
 python setup.py develop
