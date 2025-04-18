@@ -10,6 +10,7 @@ fi
 cd HAT
 
 # 📦 Instala dependências
+pip install torch torchvision torchaudio
 pip install basicsr==1.3.4.9
 pip install -r requirements.txt
 python setup.py develop
@@ -29,7 +30,8 @@ else
 fi
 
 # ⚠️ Corrige o import quebrado do torchvision
-sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' basicsr/data/degradations.py
+#sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' basicsr/data/degradations.py
+sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' /home/davi/.conda/envs/hat-env/lib/python3.10/site-packages/basicsr/data/degradations.py
 
 # 📁 Cria opções de teste
 mkdir -p options/test
@@ -45,7 +47,7 @@ datasets:
   test:
     name: demo
     type: SingleImageDataset
-    dataroot_lq: ../inputs_imgs
+    dataroot_lq: ../../inputs_imgs
     io_backend:
       type: disk
 
