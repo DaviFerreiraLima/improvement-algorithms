@@ -92,4 +92,4 @@ python hat/test.py -opt options/test/Real_HAT_GAN_sharper.pth.yml
 
 # ✅ Mostra os arquivos de saída
 echo "✅ Resultados salvos em: results/Real_HAT_GAN_sharper/visual/"
-ls -lh results/Real_HAT_GAN_sharper/visual/
+ls -lh results/Real_HAT_GAN_sharper.pth/visualization/
