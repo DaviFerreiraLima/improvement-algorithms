@@ -31,7 +31,14 @@ fi
 
 # ⚠️ Corrige o import quebrado do torchvision
 #sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' basicsr/data/degradations.py
+
 sed -i 's/from torchvision.transforms.functional_tensor import rgb_to_grayscale/from torchvision.transforms.functional import rgb_to_grayscale/' /home/davi/.conda/envs/hat-env/lib/python3.10/site-packages/basicsr/data/degradations.py
+
+# Passo 4: Criar a pasta 'images_teste'
+mkdir -p ./inputs_imgs
+
+# Passo 5: Baixar a imagem de teste do Google Drive e movê-la para a pasta 'images_teste'
+gdown https://drive.google.com/uc?id=1B4Qafq44qYE1G838DW4TnjirIztFBEbb -O ./inputs_imgs/test_image.png
 
 # 📁 Cria opções de teste
 mkdir -p options/test
