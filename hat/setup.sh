@@ -54,7 +54,7 @@ datasets:
   test:
     name: demo
     type: SingleImageDataset
-    dataroot_lq: ../../inputs_imgs
+    dataroot_lq: ./inputs_imgs
     io_backend:
       type: disk
 
